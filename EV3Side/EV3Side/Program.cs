@@ -62,7 +62,7 @@ namespace EV3Side
         private const string MOVEMENT_RIGHT = "right";
         private const string MOVEMENT_LEFT = "left";
         private const string MOVEMENT_BACKWARD = "backward";
-        private const string MOVEMENT_NONE = "";
+        private const string MOVEMENT_NONE = "none";
 
         /// <summary>
         /// The entry point into the application (although the actual
@@ -169,11 +169,14 @@ namespace EV3Side
                 while (true)
                 {
                     string responseString = await client.GetStringAsync("http://" + SERVER_ADDRESS + GET_REQUEST_URL);
-                    
+
                     if (responseString != MOVEMENT_NONE)
                     {
                         Console.WriteLine(responseString);
                     }
+
+                    // TODO: this is only for testing
+                    continue;
 
                     switch (responseString)
                     {
@@ -186,7 +189,7 @@ namespace EV3Side
 
                                 break;
                             }
-                            
+
 
                         case MOVEMENT_RIGHT:
                             {
@@ -194,7 +197,7 @@ namespace EV3Side
                                 {
                                     ev3.Vehicle.SpinRight(SPEED);
                                 }
-                            
+
                                 break;
                             }
 
