@@ -1,0 +1,24 @@
+{
+  "name": "robotsub",
+  "version": "1.0.0",
+  "description": "A way to remotely control an EV3",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m3579/RobotSub.git"
+  },
+  "author": "Mihir Kasmalkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m3579/RobotSub/issues"
+  },
+  "homepage": "https://github.com/m3579/RobotSub#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
